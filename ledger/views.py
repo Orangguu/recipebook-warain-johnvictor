@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
 def recipe_list(request):
     ctx = {
@@ -29,6 +30,7 @@ def recipe_list(request):
             ],
             "link": "/recipe/1"
         },
+
         {
             "name": "Recipe 2",
             "ingredients": [
@@ -95,9 +97,10 @@ def recipe_1(request):
     ],
     "link": "/recipe/1"
 }
+    
     return render(request, 'recipe_1.html', ctx)
 
-def recipe_1(request):
+def recipe_2(request):
     ctx = {
     "name": "Recipe 2",
     "ingredients": [
