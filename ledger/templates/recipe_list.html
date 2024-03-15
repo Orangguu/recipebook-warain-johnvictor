@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
+    {% extends 'header.html' %}
+
+    {% block content %}
     <head>
         <title> Recipe List </title>
     </head>
     <body>
-        <h1>Recipe Book</h1>
         <ul>
             {% for recipe in object_list %}
                 <li><a href='{{ recipe.get_absolute_url }}'> {{ recipe }}</a></li>
             {% endfor %}
         </ul>
     </body>
+    {% endblock %}
 </html>

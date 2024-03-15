@@ -3,7 +3,6 @@
     <head>
         <title>Recipe List</title>
         <h1>Login</h1>
-        <a href = "{% url 'password_reset' %}">I forgot.</a>
     </head>
     <body>
         <form method="POST">
@@ -11,5 +10,7 @@
             {{ form.as_p }}
             <button type="submit">Login</button>
         </form>
+        
+        <a href = "{% url 'password_reset' %}">Forgot your password?</a>
     </body>
 </html>

@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
+
+    {% extends 'header.html' %}
+
+    {% block content %}
     <head>
         <title>{{ object.name }}</title>
     </head>
     <body>
-        <h1>Written by: {{ object.author }}</h1>
+        <p>Author: {{ object.author }}</p>
         <h2>{{ object.name }}</h2>
         <h3>Ingredients:</h3>
         <ul>
@@ -13,4 +17,6 @@
             {% endfor %}
         </ul>
     </body>
+    {% endblock %}
+
 </html>

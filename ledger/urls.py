@@ -5,7 +5,6 @@ from .views import RecipeListView, RecipeDetailView
 urlpatterns = [
     path("recipes/list", RecipeListView.as_view(), name="recipe-list"),
     path("recipe/<int:pk>/detail", RecipeDetailView.as_view(), name="recipe-detail"),
-    path("accounts/", include("django.contrib.auth.urls")),
 ]
 
 app_name = "ledger"
